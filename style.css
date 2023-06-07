@@ -1,0 +1,6 @@
+li {
+  list-style: none;
+}
+.images {
+  object-fit: cover;
+}

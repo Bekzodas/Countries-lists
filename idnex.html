@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body class="bg-light" onload="init()">
+    <div
+      class="modal modal-lg"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel"></h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body" id="myModal"></div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <header class="position-sticky top-0 start-0 border-bottom bg-light z-3">
+      <nav class="navbar navbar-expand-lg my-3">
+        <div class="container-fluid">
+          <button
+            class="navbar-toggler border border-2 my-3"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="text-light"><i class="fa-solid fa-bars p-1"></i></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 align-items-center">
+              <li class="nav-item p-1 w-100">
+                <button
+                  class="btn btn-outline-dark fw-bold rounded-2 px-5 text-center w-100"
+                  id="all"
+                  onclick="search('all')"
+                >
+                  All
+                </button>
+              </li>
+              <li class="nav-item p-1 w-100">
+                <button
+                  class="btn btn-outline-dark fw-bold rounded-2 px-5 text-center w-100"
+                  id="asia"
+                  onclick="search('asia')"
+                >
+                  Asia
+                </button>
+              </li>
+              <li class="nav-item p-1 w-100">
+                <button
+                  class="btn btn-outline-dark fw-bold rounded-2 px-5 text-center w-100"
+                  id="europe"
+                  onclick="search('europe')"
+                >
+                  Europe
+                </button>
+              </li>
+              <li class="nav-item p-1 w-100">
+                <button
+                  class="btn btn-outline-dark fw-bold rounded-2 px-5 text-center w-100"
+                  id="america"
+                  onclick="search('america')"
+                >
+                  America
+                </button>
+              </li>
+              <li class="nav-item p-1 w-100">
+                <button
+                  class="btn btn-outline-dark fw-bold rounded-2 px-5 text-center w-100"
+                  id="africa"
+                  onclick="search('africa')"
+                >
+                  Africa
+                </button>
+              </li>
+              <li class="nav-item p-1 w-100">
+                <button
+                  class="btn btn-outline-dark fw-bold rounded-2 px-5 text-center w-100"
+                  id="Oceania"
+                  onclick="search('oceania')"
+                >
+                  Oceania
+                </button>
+              </li>
+            </ul>
+            <form class="d-flex px-1" role="search">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-dark" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="container my-3">
+      <div class="countries row" id="countries"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
+      integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./main.js"></script>
+  </body>
+</html>
